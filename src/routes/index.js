@@ -9,7 +9,7 @@ const router = Router()
 
 router.get('/health', (req, res) => res.json({ status: 'ok' }))
 
-// [E1] Autenticação
+// [E1] Autenticação / TELAS DE AUTENTICAÇÃO E LOGIN
 router.post('/auth/cadastro', cadastrar)
 router.post('/auth/login', login)
 
@@ -20,7 +20,7 @@ router.get('/produtos', listarProdutos)
 // [E4] Pedidos (somente clientes)
 router.post('/pedidos', autenticar, exigirPerfil('cliente'), criarPedido)
 
-// [E6] Entregas (somente entregadores)
+// [E6] Entregas (Tela de entrega somente para entregadores)
 router.patch('/entregas/:id/status', autenticar, exigirPerfil('entregador'), atualizarStatusEntrega)
 
 export default router

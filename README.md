@@ -84,6 +84,9 @@ src/
 └── server.js
 ```
 
+
+futuramente será feita a integração com o front-END já criado para uso;
+
 ## 👥 Equipe
 
 - Maria dos Remédios Oliveira Santos
